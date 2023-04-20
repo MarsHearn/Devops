@@ -1,0 +1,5 @@
+cd ${WORKSPACE}
+echo `pwd`
+docker rm -f mydjango
+docker build -t django_docker_test:v1 .
+docker run -it -d --name mydjango -p 3000:3000 django_docker_test:v1
